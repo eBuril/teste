@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta content="IE=edge" http-equiv="X-UA-Compatible" />
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-<meta content="Um clique, descomplique!" name="description" />
+<meta content="Para teste de Visualização em diferentes tamanhos de dispositivos" name="description" />
 <meta content="eBuril" name="author" />
-<title>Um clique, descomplique!</title>
+<title>Site de Teste de Visualização</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
 <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet" />
@@ -22,36 +22,43 @@ body {
   max-width: @screen-xs-max;
 }
 .mySlides {
-/*  display: none; */
+  /*  display: none; */
+  max-width: 75%;
+  position: relative;
+  margin: auto;
 }
-
-/* Slideshow container */
-.slideshow-container {
+.mySlides1 {
+  /*  display: none; */
   max-width: 50%;
   width: 315px;
   position: relative;
   margin: auto;
 }
-
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 50%;
+  width: 315px;
+  position: relative;
+  margin: auto; */
+}
 .active {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 5.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 5.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .5} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .5} 
   to {opacity: 1}
 }
 
@@ -63,9 +70,9 @@ body {
 /* CSS anterior */
 #link-red{
   text-decoration: none;
-  line-height: 40px;
+  line-height: 20px;
   color: #FF2800;
-  font-size: 14px;
+  font-size: 12px;
   font-family: Arial;
   font-weight: bold;
 }
@@ -109,36 +116,39 @@ body {
 <body>
 
 <div class="container text-center">
-<img alt="Um clique, descomplique!" class="media img-responsive" id="imagem" src="https://goo.gl/cr5SSN" /><br/>
-<div class="slideshow-container">
+<p><a href="https://goo.gl/Lu1XQj" id="link-red" target="_blank" title="Veja este e-mail no seu navegador">Veja este e-mail no seu navegador</a></p>
+<a href="mailto:contatos@intraview.com.br?cc=administrativo@intraview.com.br&bcc=produtos@intraview.com.br&Subject=Um%20clique,%20descomplique!" target="_top"><div class="slideshow-container">
 <div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://goo.gl/cr5SSN" style="width:100%">
+  <div class="text"></div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://goo.gl/ghaES4" style="width:100%"> <!-- Link da imagem com width de 800 https://goo.gl/dtMxHf -->
+  <div class="text"></div>
+</div>
+</div></a>
+</div><br/><br/>
+
+<a href="mailto:contatos@intraview.com.br?cc=administrativo@intraview.com.br&bcc=produtos@intraview.com.br&Subject=Um%20clique,%20descomplique!" id="button_text" target="_top" alt="Solicite agora o seu orçamento!"><div class="slideshow-container">
+<div class="mySlides1 fade">
   <div class="numbertext"></div>
   <img src="https://goo.gl/ZcDKX4" style="width:100%">
   <div class="text"></div>
 </div>
-<div class="mySlides fade">
+<div class="mySlides1 fade">
   <div class="numbertext"></div>
   <img src="https://goo.gl/pBivM3" style="width:100%">
   <div class="text"></div>
 </div>
-</div>
+</div></a>
 <div style="text-align:center">
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
 </div>
-
-<!-- Do not change the code! -->
-<a id="foxyform_embed_link_186094" href="http://br.foxyform.com/"></a>
-<script type="text/javascript">
-(function(d, t){
-   var g = d.createElement(t),
-       s = d.getElementsByTagName(t)[0];
-   g.src = "http://br.foxyform.com/js.php?id=186094&sec_hash=8bb070aeb5b&width=350px";
-   s.parentNode.insertBefore(g, s);
-}(document, "script"));
-</script>
-<!-- Do not change the code! -->
+<br/><br/>
 
 <div class="table-responsive text-center">
 <table class="table table-condensed">
@@ -170,6 +180,8 @@ body {
 <script>
 var slideIndex = 0;
 showSlides();
+var slideIndex1 = 0;
+showSlides1();
 
 function showSlides() {
     var i;
@@ -185,7 +197,23 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 1000); // Change image every 2 seconds
+    setTimeout(showSlides, 5000); // Change image every 4 seconds
+}
+function showSlides1() {
+    var i1;
+    var slides1 = document.getElementsByClassName("mySlides1");
+    var dots1 = document.getElementsByClassName("dot");
+    for (i1 = 0; i1 < slides1.length; i1++) {
+       slides1[i1].style.display = "none";  
+    }
+    slideIndex1++;
+    if (slideIndex1 > slides1.length) {slideIndex1 = 1}    
+    for (i1 = 0; i1 < dots1.length; i1++) {
+        dots1[i1].className = dots1[i1].className.replace(" active", "");
+    }
+    slides1[slideIndex1-1].style.display = "block";  
+    dots1[slideIndex1-1].className += " active";
+    setTimeout(showSlides1, 1000); // Change image every 1 seconds
 }
 </script>
 
